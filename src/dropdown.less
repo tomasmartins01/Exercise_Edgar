@@ -1,0 +1,45 @@
+@color-white: #FFFFFF;
+@color-black: #000000;
+@color-atmo1: #F9F9F9;
+@color-atmo2: #F5F5F5;
+@color-atmo3: #F0F0F0;
+@color-atmo4: #DEDEDE;
+@color-atmo5: #BCBCBC;
+@color-atmo6: #999999;
+@color-atmo7: #414141;
+@color-acce2: #146BD2;
+
+.chevron {
+  &:before {
+    position: absolute;
+    height: 1px;
+    width: 6px;
+    background-color: @color-atmo7;
+    content: "";
+    top: 16px;
+    right: 12px;
+    transform: rotate(45deg);
+    border-radius: 1px 0px 0px 1px;
+    transition: transform 0.2s ease-out;
+  }
+  &:after {
+    position: absolute;
+    height: 1px;
+    width: 6px;
+    background-color: @color-atmo7;
+    content: "";
+    top: 16px;
+    right: 8px;
+    transform: rotate(-45deg);
+    border-radius: 0px 1px 1px 0px;
+    transition: transform 0.2s ease-out;
+  }
+
+  &.up::before{
+    transform: rotate(-45deg);
+  }
+
+  &.up::after{
+    transform: rotate(45deg);
+  }
+}
