@@ -1,0 +1,55 @@
+#banner_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner_message {
+  width: 300px;
+  height: 100px;
+  border-radius: 10px;
+  &.message_remove {
+    animation: fixeMensagem 3s linear;
+  }
+  p {
+    padding-top: 10px;
+    padding-left: 30px;
+    color: black;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+}
+
+.banner_button {
+  margin: 10px;
+  width: 20px;
+  height: 20px;
+  color: red;
+  border-radius: 10px;
+  background-color: white;
+  position: relative;
+  top: -32px;
+  left: 36px;
+
+  &.button_remove {
+    animation: fixeButton 3s linear;
+  }
+}
+
+@keyframes fixeMensagem {
+  50% {
+    transform: translateY(-500px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fixeButton {
+  50% {
+    transform: translateX(-1000px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}

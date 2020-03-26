@@ -1,27 +1,14 @@
-import React, { Component } from "react";
-import "./style.less";
-import Navigation from "./Navigation";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React, { Component, Fragment } from "react";
 import { hot } from "react-hot-loader";
-
-import { Exercise } from "./Pages/Exercise";
-import { Homepage } from "./Pages/Homepage";
+import "./Styles/App.less";
+import Router from "./Components/Router.jsx";
 
 class App extends Component {
   render() {
     return (
-      <Router>
-        <Switch>
-          <Route exact path="/">
-            <Navigation selected="react" />
-            <Homepage />
-          </Route>
-          <Route path="/exercise">
-            <Navigation selected="exercise" />
-            <Exercise />
-          </Route>
-        </Switch>
-      </Router>
+      <Fragment>
+        <Router />
+      </Fragment>
     );
   }
 }
